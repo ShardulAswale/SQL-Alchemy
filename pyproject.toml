@@ -1,0 +1,60 @@
+[project]
+name = "db_example"
+version = "0.1.0"
+description = "Reference async SQLAlchemy + MySQL project using repository and unit-of-work patterns."
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+
+dependencies = [
+  "SQLAlchemy[asyncio]>=2.0.0",
+  "asyncmy>=0.2.9",
+  "python-dotenv>=1.0.1",
+  "cryptography>=42.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-asyncio>=0.23.0",
+  "black>=24.0.0",
+  "ruff>=0.5.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# ------------------------------
+# Pytest configuration
+# ------------------------------
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+# ------------------------------
+# Black formatter config
+# ------------------------------
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+# ------------------------------
+# Ruff linter config
+# ------------------------------
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+select = ["E", "F", "I"]

@@ -1,0 +1,23 @@
+asyncmy==0.2.10
+black==25.11.0
+cffi==2.0.0
+click==8.3.1
+cryptography==46.0.3
+# Editable install with no version control (db_example==0.1.0)
+-e /home/shardul/EC/SQLAlchemy
+greenlet==3.2.4
+iniconfig==2.3.0
+mypy_extensions==1.1.0
+packaging==25.0
+pathspec==0.12.1
+platformdirs==4.5.0
+pluggy==1.6.0
+pycparser==2.23
+Pygments==2.19.2
+pytest==9.0.1
+pytest-asyncio==1.3.0
+python-dotenv==1.2.1
+pytokens==0.3.0
+ruff==0.14.6
+SQLAlchemy==2.0.44
+typing_extensions==4.15.0
